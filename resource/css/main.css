@@ -30,12 +30,24 @@ header {
 
 /* Justin's stuff, feel free to move & edit */
 #products {
-	/* grid settings */
-	display: grid;
+	/* (grid) flex settings */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 2em;
+	padding: 0 2em;
+
+	/*
+	trying to get auto column without media tag to work 
+	Media tag would still be needed to change the product layout when it gets real small:
+		-> change from horizontal to vertical card layout
+	scrapping for now and managing with flex
+	*/
+	/* grid-template-columns: repeat(auto-fit, minmax(450px, 50%)); */
+	/* grid-auto-columns: minmax(450px, 35em); */
+	
 	/* temporary position settings */
-	margin: 0 auto;
-	width: 800px;
+	margin: 10px 5px;
 }
 
 /* applying background to show element size */
@@ -60,12 +72,16 @@ header {
 	border: 2px solid black;
 	/* apply gap to padding too */
 	padding: 1em;
+	/* min-width: 400px; */
+	max-width: 550px;
+	/* temporary centering */
+	/* margin: 0 auto; */
 	/* grid layout settings */
 	display: grid;
 	gap: 1em;
 	/* might change the first fr be smaller? */
-	grid-template-columns: 20em 1fr;
-	grid-template-rows: 2em 200px 3em;
+	grid-template-columns: 8em 1fr;
+	grid-template-rows: 2em 8em 3em;
 }
 
 .product h3 {
