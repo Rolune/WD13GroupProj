@@ -7,7 +7,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
- 
 } 
 
 .logo img {
@@ -27,6 +26,62 @@ header {
 .nav-links li {
     display: inline-block;
     margin-left: 30px;
+}
+
+/* Justin's stuff, feel free to move & edit */
+#products {
+	display: grid;
+	/* temporary position settings */
+	margin: 0 auto;
+	width: 800px;
+}
+
+.product {
+	/* temp outline to show section */
+	border: 2px solid black;
+	/* grid layout settings */
+	display: grid;
+	/* might change the first fr be smaller? */
+	grid-template-columns: 20em 1fr;
+	grid-template-rows: 2em 200px 3em;
+}
+
+.product h3 {
+	/* grid setting */
+	grid-column: 1 / span 1;
+	/* centering */
+	margin: auto;
+}
+
+.product img {
+	/* grid setting */
+	grid-row: 2 / span 1;
+	grid-column: 1 / span 1;
+	/* centering */
+	margin: auto;
+}
+
+.product p.price {
+	/* grid setting */
+	grid-row: 3 / span 1;
+	grid-column: 1 / span 1;
+	/* center upper */
+	margin: 0 auto auto;
+}
+
+.product p.description {
+	/* grid setting */
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.product input {
+	/* grid setting */
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+	/* centering */
+	margin: auto;
+	/* size setting */
 }
 
 /*corey changes */
