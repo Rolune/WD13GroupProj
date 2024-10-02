@@ -3,6 +3,32 @@
 	padding: 0;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+} 
+
+.logo img {
+    width: 150px; /* Adjust the size of  logo */
+}
+
+/* Navigation list styling */
+.nav-links {
+    list-style: none;
+}
+	
+.nav-links li a{
+	text-decoration: none;
+}
+
+/* Styling the individual nav items */
+.nav-links li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
 /* Justin's stuff, feel free to move & edit */
 #products {
 	display: grid;
