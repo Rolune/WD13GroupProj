@@ -3,11 +3,6 @@
 	padding: 0;
 }
 
-html {
-	/* Justin's temporary variables */
-	--col-00: hsl(0 40 60);
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -42,6 +37,23 @@ header {
 	margin: 0 auto;
 	width: 800px;
 }
+
+/* applying background to show element size */
+/* elemSize */
+#products {
+	/* Justin's temporary variables */
+	--col-00: #132F40;
+	background: var(--col-00);
+}
+
+#products > * {
+	background: hsl(from var(--col-00, red) h calc(s - 10) calc(l + 20));
+}
+
+#products > * > * {
+	background: hsl(from var(--col-00, red) h calc(s - 20) calc(l + 40));
+}
+/* !!elemSize!! */
 
 .product {
 	/* temp outline to show section */
@@ -87,7 +99,6 @@ header {
 	grid-row: 1 / 3;
 	grid-column: 2;
 	/* shows obj size */
-	background: var(--col-00);
 }
 
 .product input {
