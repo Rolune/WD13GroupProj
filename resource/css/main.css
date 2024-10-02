@@ -7,7 +7,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
- 
 } 
 
 .logo img {
@@ -83,5 +82,23 @@ header {
 	/* centering */
 	margin: auto;
 	/* size setting */
+}
+
+/*corey changes */
+
+footer {
+	width: 100%;
+	padding: 10px 20px;
+	background-color: grey;
+}
+
+footer div {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+footer img {
 	width: 100px;
 }
