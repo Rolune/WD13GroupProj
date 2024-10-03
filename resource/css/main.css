@@ -168,10 +168,12 @@ footer img {
 	grid-template-rows: 1fr; /* rows are as tall as need to be */
 }
 
-/* Below is code attempting to move the 'Total Price' to the far right, but doesn't work, it messes up the grid
 
 .cart-total {
-	grid-column: 3;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
 }
 
-*/
+.total {
+	grid-column: 3;
+}
