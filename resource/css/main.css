@@ -3,30 +3,50 @@
 	padding: 0;
 }
 
+/* Header */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Center the navigation */
     align-items: center;
-} 
+    padding: 10px;
+    background-color: #2480b6; /* Optional background */
+    position: relative; /* So the logo can be positioned */
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    left: 20px; /* Position the logo to the left */
+    background-color: beige;
+}
 
 .logo img {
-    width: 150px; /* Adjust the size of  logo */
+    width: 150px; /* Adjust logo size */
 }
 
 /* Navigation list styling */
 .nav-links {
-    list-style: none;
-}
-	
-.nav-links li a{
-	text-decoration: none;
+    display: flex;
+    gap: 30px; /* Add space between the links */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
 }
 
-/* Styling the individual nav items */
-.nav-links li {
-    display: inline-block;
-    margin-left: 30px;
+/* Navigation links */
+.nav-links li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+    font-size: 18px;
+    background-color: beige;    
 }
+
+/* Optional: Hover effect */
+.nav-links li a:hover {
+    color: #007BFF; /* Change color on hover */
+    font-size: 1.2em;
+}
+
 
 /* Justin's stuff, feel free to move & edit */
 #products {
