@@ -195,6 +195,6 @@ footer img {
 	grid-template-columns: 1fr 2fr 1fr;
 }
 
-.total {
+.cart-total span {
 	grid-column: 3;
 }
