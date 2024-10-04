@@ -177,3 +177,7 @@ footer img {
 .total {
 	grid-column: 3;
 }
+
+@media only screen and (max-width: 500px) {
+	
+}
