@@ -198,3 +198,51 @@ footer img {
 .cart-total span {
 	grid-column: 3;
 }
+
+@media only screen and (max-width: 500px) {
+	#products {
+		margin: 0 5px;
+		padding: 10px 2em;
+	}
+
+	.product {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto 2em 6em 3em;
+	}
+
+	.product h3 {
+		/* grid setting */
+		grid-column: 1 / span 2;
+		grid-row: 2;
+	}
+	.product img {
+		/* grid setting */
+		grid-row: 1;
+		grid-column: 1 / span 2;
+		/* change max height
+		now that we know it'll be 500 width max
+		*/
+		max-height: 500px;
+	}
+
+	.product p.description {
+		/* grid setting */
+		grid-row: 3;
+		grid-column: 1 / span 2;
+	}
+
+	.product p.price {
+		/* grid setting */
+		grid-row: 4;
+		grid-column: 1;
+		/* center upper */
+		margin: auto auto auto 0;
+	}
+
+	.product input {
+		/* grid setting */
+		grid-row: 4;
+		grid-column: 2;
+		/* centering */
+	}
+}
