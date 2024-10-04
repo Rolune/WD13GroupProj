@@ -54,22 +54,8 @@ header {
   .nav-links a:hover {
 	color: #306E8A; /* Change color on hover */
 	font-size: 1.2em;
+	text-shadow: 0.5px 0.5px  rgba(31, 30, 30, 0.5);
   }
-  
-  
-  
-
-  
-
-
-
-
-
-
-
-
-
-
 
 /* Justin's stuff, feel free to move & edit */
 #products {
