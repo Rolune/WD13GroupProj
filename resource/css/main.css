@@ -3,6 +3,16 @@
 	padding: 0;
 }
 
+:root {
+	/* warnging colour
+		add as fall back variable
+		should be easy for us to notice to fix it
+	*/
+	--col-WARNING-0: magenta;
+	--col-WARNING-1: darkred;
+	--col-WARNING: repeating-linear-gradient(45deg, var(--col-WARNING-0), var(--col-WARNING-0) 10px, var(--col-WARNING-1) 10px, var(--col-WARNING-1) 20px);
+}
+
 /* Style the header to use Flexbox */
 header {
 	display: flex;
@@ -69,7 +79,7 @@ header {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 2em;
-	padding: 0 2em;
+	padding: 2em 2em;
 
 	/*
 	trying to get auto column without media tag to work 
@@ -81,23 +91,23 @@ header {
 	/* grid-auto-columns: minmax(450px, 35em); */
 	
 	/* temporary position settings */
-	margin: 10px 5px;
+	margin: 0 5px;
 }
 
 /* applying background to show element size */
 /* elemSize */
 #products {
 	/* Justin's temporary variables */
-	--col-00: #132F40;
-	background: var(--col-00);
+	--col-00: #0E1B24;
+	background: var(--col-00, var(--col-WARNING));
 }
 
 #products > * {
-	background: hsl(from var(--col-00, red) h calc(s - 10) calc(l + 20));
+	background: hsl(from var(--col-00, magenta) h calc(s - 10) calc(l + 25));
 }
 
 #products > * > * {
-	background: hsl(from var(--col-00, red) h calc(s - 20) calc(l + 40));
+	background: hsl(from var(--col-00, magenta) h calc(s - 20) calc(l + 50));
 }
 /* !!elemSize!! */
 
@@ -215,7 +225,7 @@ footer img {
 @media only screen and (max-width: 500px) {
 	#products {
 		margin: 0 5px;
-		padding: 10px 2em;
+		padding: 2em 2em;
 	}
 
 	.product {
