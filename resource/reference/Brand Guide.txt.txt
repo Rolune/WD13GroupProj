@@ -1,0 +1,22 @@
+BRAND NAME -
+
+(concepts):
+Mist Muse		Mistborn
+Bottled Dreams		Scented Secrets
+Aroma Alchemy		
+Scent Craft
+
+
+COLOURS - 
+
+White (for general text)
+Gold/Yellow (headings):		#D9C27E
+Lightest Blue (gradient 1):	#2A6A86
+Medium Blue (gradient 2):	#112C41
+Darkest Blue (some BGs):	#0E1B24
+
+
+FONTS - 
+
+Headings (serif):		Book Antiqua
+Body Text (sans-serif):		Helvetica
