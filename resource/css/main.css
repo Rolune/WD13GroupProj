@@ -72,6 +72,19 @@ header {
 	margin-top: 41px;
   }
 
+/* testing cart dropdown */
+
+.test-cart-content {
+	position: fixed;
+	display: none;
+	background: white;
+}
+
+.test-cart-btn:focus-within .test-cart-content {
+	display: block;
+}
+
+
 /* Justin's stuff, feel free to move & edit */
 #products {
 	/* grid settings */
