@@ -74,23 +74,18 @@ header {
 
 /* Justin's stuff, feel free to move & edit */
 #products {
-	/* (grid) flex settings */
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	/* grid settings */
+	display: grid;
 	gap: 2em;
 	padding: 2em 2em;
-
 	/*
-	trying to get auto column without media tag to work 
-	Media tag would still be needed to change the product layout when it gets real small:
-		-> change from horizontal to vertical card layout
-	scrapping for now and managing with flex
+	working, I think you can't use percentage for minmax?
+	oh well, 1fr works better anyway
 	*/
-	/* grid-template-columns: repeat(auto-fit, minmax(450px, 50%)); */
-	/* grid-auto-columns: minmax(450px, 35em); */
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 	
 	/* temporary position settings */
+	/* might remove? */
 	margin: 0 5px;
 }
 
@@ -112,19 +107,16 @@ header {
 /* !!elemSize!! */
 
 .product {
+	margin: 0 auto;
 	/* temp outline to show section */
 	border: 2px solid black;
 	/* apply gap to padding too */
 	padding: 1em;
-	/* min-width: 400px; */
-	max-width: 550px;
-	/* temporary centering */
-	/* margin: 0 auto; */
 	/* grid layout settings */
 	display: grid;
 	gap: 1em;
 	/* might change the first fr be smaller? */
-	grid-template-columns: 8em 1fr;
+	grid-template-columns: 8em auto;
 	grid-template-rows: 2em 8em 3em;
 }
 
@@ -158,7 +150,6 @@ header {
 	/* grid setting */
 	grid-row: 1 / 3;
 	grid-column: 2;
-	/* shows obj size */
 }
 
 .product input {
@@ -226,6 +217,7 @@ footer img {
 	#products {
 		margin: 0 5px;
 		padding: 2em 2em;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 
 	.product {
@@ -252,6 +244,8 @@ footer img {
 		/* grid setting */
 		grid-row: 3;
 		grid-column: 1 / span 2;
+
+		overflow-y: auto;
 	}
 
 	.product p.price {
