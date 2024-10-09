@@ -20,3 +20,5 @@ FONTS -
 
 Headings (serif):		Book Antiqua
 Body Text (sans-serif):		Helvetica
+
+Primary Heading (Mermaid)	https://www.dafont.com/mermaid.font
