@@ -76,11 +76,13 @@ header {
 
 .test-cart-content {
 	position: fixed;
-	display: none;
 	background: white;
+	/* display changing is what's making this work */
+	display: none;
 }
 
 .test-cart-btn:focus-within .test-cart-content {
+	/* display changing is what's making this work */
 	display: block;
 }
 
