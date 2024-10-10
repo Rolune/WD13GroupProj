@@ -64,6 +64,7 @@ header {
 	background-image: linear-gradient(to bottom left, #2A6A86, #112C41); /* Optional background */
     position: fixed; /* So the logo can be positioned */
 	top: 0;
+	z-index: 99;
   }
   
   /* Styling the logo */
@@ -273,11 +274,11 @@ footer img {
 }
 /* !!Footer Section!! */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 	#products {
 		margin: 0 5px;
 		padding: 2em 2em;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-columns: 1fr;
 	}
 
 	.product {
@@ -294,7 +295,7 @@ footer img {
 		/* change max height
 		now that we know it'll be 500 width max
 		*/
-		max-height: 500px;
+		max-height: 600px;
 
 		/* grid setting */
 		grid-row: 1;
