@@ -99,26 +99,10 @@ header {
 	margin: 0 5px;
 }
 
-/* applying background to show element size */
-/* elemSize */
-#products {
-	/* Justin's temporary variables */
-	/* --col-00: #0E1B24;  TEMP BACKGROUND FOR DIV AREA, COREY REMOVED
-	background: var(--col-00, var(--col-WARNING)); */
-}
-
 #products > * {
 	background-image: linear-gradient(to bottom right,#2A6A86, #112C41);
 	/* background: hsl(from var(--col-00, magenta) h calc(s - 10) calc(l + 25)); COREY REMOVED */
 }
-
-/* removing input from list */
-#products > * > h3,
-#products > * > img,
-#products > * > p {
-	background: /* hsl(from var(--col-00, magenta) h calc(s - 20) calc(l + 50)); COREY REMOVED, DIV ELEMENT BGs*/
-}
-/* !!elemSize!! */
 
 .product {
 	margin: 0 auto;
