@@ -251,36 +251,36 @@ header {
 		grid-row: 2;
 	}
 	.product img {
-		/* grid setting */
-		grid-row: 1;
-		grid-column: 1 / span 2;
 		/* change max height
 		now that we know it'll be 500 width max
 		*/
 		max-height: 500px;
+
+		/* grid setting */
+		grid-row: 1;
+		grid-column: 1 / span 2;
 	}
 
 	.product p.description {
+		overflow-y: auto;
+
 		/* grid setting */
 		grid-row: 3;
 		grid-column: 1 / span 2;
-
-		overflow-y: auto;
 	}
 
 	.product p.price {
+		margin: auto auto auto 0;
+
 		/* grid setting */
 		grid-row: 4;
 		grid-column: 1;
-		/* center upper */
-		margin: auto auto auto 0;
 	}
 
 	.product input {
 		/* grid setting */
 		grid-row: 4;
 		grid-column: 2;
-		/* centering */
 	}
 }
 
