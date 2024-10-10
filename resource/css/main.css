@@ -74,7 +74,7 @@ header {
 	width: 20px;
   }
   .logo img {
-    width: 2.3em; /* Adjust logo size */
+    width: 2.8em; /* Adjust logo size */
 	height: auto;
 }
   
@@ -122,6 +122,7 @@ main{
 	display: grid;
 	gap: 2em;
 	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
 }
 
 #products > * {
@@ -141,7 +142,10 @@ main{
 	gap: 1em;
 	/* might change the first fr be smaller? */
 	grid-template-columns: 8em auto;
-	grid-template-rows: 2em 8em 3em;
+	grid-template-rows: 2em 8.2em 3em;
+
+	/* drop shadow for product boxes with slight opacity adjustment */
+	box-shadow: 10px 10px 5px rgba(14, 27, 36, 0.5);
 }
 
 .product h1 {
@@ -164,6 +168,9 @@ main{
 	/* grid setting */
 	grid-row: 2;
 	grid-column: 1;
+
+	/* added a drop shadow for each bottle, softens the look */
+	filter: drop-shadow(5px 5px 10px black);
 }
 
 .product p.price {
