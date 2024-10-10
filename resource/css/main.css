@@ -84,19 +84,12 @@ header {
 
 /* Justin's stuff, feel free to move & edit */
 #products {
+	padding: 8em 2em;
+
 	/* grid settings */
 	display: grid;
 	gap: 2em;
-	padding: 8em 2em;
-	/*
-	working, I think you can't use percentage for minmax?
-	oh well, 1fr works better anyway
-	*/
 	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-	
-	/* temporary position settings */
-	/* might remove? */
-	margin: 0 5px;
 }
 
 #products > * {
