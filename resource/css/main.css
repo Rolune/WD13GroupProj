@@ -106,20 +106,17 @@ header {
 
 .product {
 	margin: 0 auto;
-	/* temp outline to show section */
-	/* border: 2px solid black; COREY REMOVED FOR AESTHETICS*/
-	/* apply gap to padding too */
+	border-radius: 40px;
 	padding: 2em; /* COREY ADJUSTED FROM 1em */
+
+	color: white;
+
 	/* grid layout settings */
 	display: grid;
 	gap: 1em;
 	/* might change the first fr be smaller? */
 	grid-template-columns: 8em auto;
 	grid-template-rows: 2em 8em 3em;
-	/* corey changes */
-	
-	border-radius: 40px;
-	color: white;
 }
 
 	.product h2 {	/* COREY i'm not sure this is used now? */
