@@ -16,3 +16,13 @@ doesn't work
 I think you can't use percentage for minmax?
 should use something like
 grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+---
+
+https://elharony.com/images-not-displaying-in-github-pages/
+GitHub Pages is case-sensitive
+
+Locally, it doesn’t matter. But if you are deploying your app on GitHub Pages, you have to double-check the sensitivity of the images’ name. Keep in mind;
+
+    myImage.jpg isn’t the same as myImage.JPG
+    Moreover, myImage.jpg isn’t the same as myimage.jpg
