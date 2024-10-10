@@ -10,6 +10,11 @@
 }
 
 :root {
+	/* colour from palette */
+	--col-headings: #D9C27E;
+	--col-gradient1: #2A6A86;
+	--col-gradient2: #112C41;
+	--col-bg: #0E1B24;
 	/* warnging colour
 		add as fall back variable
 		should be easy for us to notice to fix it
@@ -159,34 +164,32 @@ header {
 }
 
 .product input {
-	/* grid setting */
-	grid-row: 3;
-	grid-column: 2;
-	/* centering */
 	margin: auto;
-	/* clear style */
-	border: 0;
+
 	/* size setting */
 	width: 10em;
 	height: 3em;
-	/* minor styling: feel free to change */
-	background: hsl(from var(--col-00, magenta) h calc(s - 20) calc(l + 50));
-	border-radius: 3px;
+
+	/* grid setting */
+	grid-row: 3;
+	grid-column: 2;
 }
 
-.product input:hover {
-	border: 3px solid hsl(from var(--col-00, magenta) h calc(s - 20) calc(l + 60));
-	background: hsl(from var(--col-00, magenta) h calc(s - 20) calc(l + 50));
-}
-
-.product input:active {
+.button-style {
 	border: 0;
-	background: var(--col-00, var(--col-WARNING));
-}
-
-#button-style {
+	border-radius: 3px;
+	
 	color:white;
 	background-color: #112C41;
+}
+
+.button-style:hover {
+	border: 3px solid white;
+}
+
+.button-style:active {
+	border: 0;
+	background-color: var(--col-bg);
 }
 
 /* Corey Recent Changes */
