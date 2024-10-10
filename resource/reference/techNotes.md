@@ -8,3 +8,11 @@ https://stackoverflow.com/questions/8549529/what-is-the-difference-between-scree
 seems like it's prevent bug in older machine
 	backward compatibility
 Leaving it in
+
+---
+
+grid-template-columns: repeat(auto-fit, minmax(450px, 20%));
+doesn't work
+I think you can't use percentage for minmax?
+should use something like
+grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
