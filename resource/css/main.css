@@ -123,26 +123,29 @@ header {
 }
 
 .product img {
+	margin: auto;
+
+	/* image size */
+	max-height: 100%;
+	max-width: 100%;
+
 	/* grid setting */
 	grid-row: 2;
 	grid-column: 1;
-	/* centering */
-	margin: auto;
-	/* modifying image */
-	max-height: 100%;
-	max-width: 100%;
 }
 
 .product p.price {
-	/* grid setting */
-	grid-row: 3;
-	grid-column: 1;
 	/* center upper */
 	margin: 0 auto; /* COREY altered to center with cart button */
+	
 	color: #D9C27E;
 	align-self: center; /* COREY altered to center with cart button, also altered font below slightly*/
 	font-style: italic;
 	font-size: 1.15em;
+
+	/* grid setting */
+	grid-row: 3;
+	grid-column: 1;
 }
 
 .product p.description {
