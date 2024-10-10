@@ -215,6 +215,10 @@ main{
 /* !!Main Section!! */
 
 /* Cart Section */
+.cart-container {
+	/* padding to match look with product window above */
+	padding: 2em;
+}
 /* Corey Recent Changes */
 .cart-items {
 	background-color: #112C41;
@@ -222,7 +226,7 @@ main{
 	/* temporary position settings */
 	margin: 0 auto;
 	margin-bottom: 100px; /* COREY added for spacing from footer */
-	width: 600px;
+	max-width: 600px;
 	padding: 10px 30px;
 	border-radius: 2%;
 	color:#D9C27E;
@@ -238,6 +242,8 @@ main{
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: 1fr; /* rows are as tall as need to be */
+	/* added gap to match padding above, open to change, also check below 600px */
+	gap: 15px;
 	color: white;
 	line-height: 1.4em; /* COREY ADDED to space out cart items a little, make it look more like a list */
 }
@@ -322,5 +328,16 @@ footer img {
 		/* grid setting */
 		grid-row: 4;
 		grid-column: 2;
+	}
+
+	.cart-item {
+		/* changed text area to take min amt needed
+		relying on gap setting*/
+		grid-template-columns: auto 1fr 1fr;
+	}
+
+	.add-item {
+		/* adding space when remove button moves below */
+		margin-bottom: 0.5em;
 	}
 }
