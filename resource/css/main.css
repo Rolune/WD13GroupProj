@@ -112,22 +112,14 @@ header {
 	grid-template-rows: 2em 8em 3em;
 }
 
-	.product h2 {	/* COREY i'm not sure this is used now? */
-	/* grid setting */
-	grid-column: 1;
-	/* centering */
-	margin: auto;
-	color: #D9C27E;
-	font-family: 'Mermaid','Book Antiqua';
-}
-
 .product h1 {
-	/* grid setting */
-	grid-column: 1;
-	/* centering */
 	margin: auto;
+
 	color: #D9C27E;
 	font-family: 'Mermaid','Book Antiqua';
+
+	/* grid setting */
+	grid-column: 1;
 }
 
 .product img {
