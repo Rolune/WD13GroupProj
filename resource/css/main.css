@@ -154,13 +154,16 @@ header {
 }
 
 .product p.description {
-	/* grid setting */
-	grid-row: 2;
-	grid-column: 2;
+	padding: 0 0 0 1.85em; /* COREY ADDED creates a little more space between text and image */
+	
 	letter-spacing: 0.06em; /* COREY marginal space increase between letters */
 	word-spacing: 0.05em;
 	line-height: 1.17em;
-	padding: 0 30px; /* COREY ADDED creates a little more space between text and image */
+	overflow-y: auto;
+
+	/* grid setting */
+	grid-row: 2;
+	grid-column: 2;
 }
 
 .product input {
