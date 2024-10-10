@@ -301,7 +301,7 @@ footer img {
 		/* change max height
 		now that we know it'll be 500 width max
 		*/
-		max-height: 600px;
+		max-height: 300px;
 
 		/* grid setting */
 		grid-row: 1;
