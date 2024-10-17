@@ -62,53 +62,53 @@ header {
 	padding: 20px;
 	width: 100%; /* Full width of the header */
 	background-image: linear-gradient(to bottom left, #2A6A86, #112C41); /* Optional background */
-    position: fixed; /* So the logo can be positioned */
+	position: fixed; /* So the logo can be positioned */
 	top: 0;
 	z-index: 99;
-  }
-  
-  /* Styling the logo */
-  .logo  {
+}
+
+/* Styling the logo */
+.logo {
 	position: absolute;
-    left: 20px; /* Position the logo to the left */
+	left: 20px; /* Position the logo to the left */
 	margin-top: 0.2em;
 	width: 20px;
-  }
-  .logo img {
-    width: 2.8em; /* Adjust logo size */
+}
+.logo img {
+	width: 2.8em; /* Adjust logo size */
 	height: auto;
 }
-  
-  /* Styling the navigation menu */
-  nav {
+
+/* Styling the navigation menu */
+nav {
 	width: 70%; /* Adjust width of the nav section */
-  }
-  
-  nav ul {
+}
+
+nav ul {
 	display: flex;
 	justify-content: space-between; /* Evenly space the links */
 	list-style: none; /* Remove default bullet points */
 	padding: 0;
 	margin: 0;
-  }
-  
-  /* Styling individual navigation links */
-  .nav-links li {
+}
+
+/* Styling individual navigation links */
+.nav-links li {
 	margin: 0 10px; /* Optional: Adjust spacing between each link */
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
 	text-decoration: none;
 	font-size: 18px; /* Adjust font size */
 	color: white; /* Adjust text color */
-  }
+}
   
-  /* Optional: Add hover effect on links */
-  .nav-links a:hover {
+/* Optional: Add hover effect on links */
+.nav-links a:hover {
 	color: #306E8A; /* Change color on hover */
 	font-size: 1.2em;
 	text-shadow: 0.5px 0.5px  rgba(31, 30, 30, 0.5);
-  }
+}
 /* !!Header Section!! */
 
 /* Main Section */
@@ -280,7 +280,16 @@ footer img {
 }
 /* !!Footer Section!! */
 
+/* Media tags
+	Maybe they should be seperate document to make it easier to see?
+*/
+
+/* Tablet Size */
+/* !!Tablet Size!! */
+
+/* Mobile Size */
 @media only screen and (max-width: 600px) {
+	/* Main Section */
 	#products {
 		margin: 0 5px;
 		padding: 2em 2em;
@@ -329,6 +338,7 @@ footer img {
 		grid-row: 4;
 		grid-column: 2;
 	}
+	/* !!Main Section!! */
 
 	.cart-item {
 		/* changed text area to take min amt needed
@@ -341,3 +351,5 @@ footer img {
 		margin-bottom: 0.5em;
 	}
 }
+
+/* !!Mobile Size!! */
