@@ -51,42 +51,64 @@ body {
 	background-color: var(--col-bg, magenta);
 }
 
+/* leaving .logo blank,
+	.logo shouldn't have default value to avoid unexpected behavior when setting size
+*/
+.logo img {
+	/* always fit into the logo div with aspect ratio */
+	object-fit: scale-down;
+	width: 100%;
+	height: 100%;
+}
+/* legacy .logo setting */
+/* .logo {
+	position: absolute;
+	left: 20px; 
+	margin-top: 0.2em;
+	width: 20px;
+} */
+
 /* !!Utility Class!! */
 
 /* Header Section */
 /* Style the header to use Flexbox */
 header {
 	display: flex;
-	justify-content: space-evenly; /* Distribute logo and nav links evenly */
-	align-items: center;
-	padding: 20px;
+	/* Disabled, current setup doesn't get affected by below 2 */
+	/* justify-content: space-evenly; */
+	/* align-items: stretch; */
+	padding: 0.4em 20px;
 	width: 100%; /* Full width of the header */
+	/* logo size + padding */
+	/* height: calc(2.8em + 0.4em); */
 	background-image: linear-gradient(to bottom left, #2A6A86, #112C41); /* Optional background */
-	position: fixed; /* So the logo can be positioned */
+	/* So the logo can be positioned */
+	position: fixed;
 	top: 0;
 	z-index: 99;
 }
 
-/* Styling the logo */
-.logo {
-	position: absolute;
-	left: 20px; /* Position the logo to the left */
-	margin-top: 0.2em;
-	width: 20px;
-}
-.logo img {
-	width: 2.8em; /* Adjust logo size */
-	height: auto;
+/* setting size for logo */
+header .logo {
+	/* position: absolute; */
+	width: 2.8em;
 }
 
 /* Styling the navigation menu */
 nav {
-	width: 70%; /* Adjust width of the nav section */
+	/* subtract logo size so About can be in the middle */
+	/* faking absolute positoning so background still scales with content */
+	margin-left: -2.8em;
+	/* grow the bar to fill in the space */
+	flex: 1;
+	align-content: center;
+	/* redundent due to flex: 1 */
+	/* width: 70%; */
 }
 
 nav ul {
 	display: flex;
-	justify-content: space-between; /* Evenly space the links */
+	justify-content: space-around; /* Evenly space the links */
 	list-style: none; /* Remove default bullet points */
 	padding: 0;
 	margin: 0;
@@ -95,6 +117,7 @@ nav ul {
 /* Styling individual navigation links */
 .nav-links li {
 	margin: 0 10px; /* Optional: Adjust spacing between each link */
+	align-content: center;
 }
 
 .nav-links a {
@@ -275,8 +298,11 @@ footer div {
 	margin: 0 0 10px 0;
 }
 
-footer img {
-	width: 100px;
+/* setting logo size */
+footer .logo {
+	/* thought I needed it, apparently not */
+	/* display: block; */
+	height: 6.2em;
 }
 /* !!Footer Section!! */
 
