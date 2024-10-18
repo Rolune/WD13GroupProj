@@ -79,6 +79,8 @@ header {
 	/* align-items: stretch; */
 	padding: 0.4em 20px;
 	width: 100%; /* Full width of the header */
+	/* logo size + padding */
+	/* height: calc(2.8em + 0.4em); */
 	background-image: linear-gradient(to bottom left, #2A6A86, #112C41); /* Optional background */
 	/* So the logo can be positioned */
 	position: fixed;
@@ -88,11 +90,15 @@ header {
 
 /* setting size for logo */
 header .logo {
+	/* position: absolute; */
 	width: 2.8em;
 }
 
 /* Styling the navigation menu */
 nav {
+	/* subtract logo size so About can be in the middle */
+	/* faking absolute positoning so background still scales with content */
+	margin-left: -2.8em;
 	/* grow the bar to fill in the space */
 	flex: 1;
 	align-content: center;
@@ -111,6 +117,7 @@ nav ul {
 /* Styling individual navigation links */
 .nav-links li {
 	margin: 0 10px; /* Optional: Adjust spacing between each link */
+	align-content: center;
 }
 
 .nav-links a {
