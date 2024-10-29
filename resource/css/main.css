@@ -78,9 +78,8 @@ header {
 	/* justify-content: space-evenly; */
 	/* align-items: stretch; */
 	padding: 0.4em 20px;
-	width: 100%; /* Full width of the header */
-	/* logo size + padding */
-	/* height: calc(2.8em + 0.4em); */
+	box-sizing: border-box;
+	width: 100vw; /* switched 100% -> 100vw, 100% seems to give weird value on tablet size? */
 	background-image: linear-gradient(to bottom left, #2A6A86, #112C41); /* Optional background */
 	/* So the logo can be positioned */
 	position: fixed;
@@ -90,7 +89,6 @@ header {
 
 /* setting size for logo */
 header .logo {
-	/* position: absolute; */
 	width: 2.8em;
 }
 
@@ -125,7 +123,7 @@ nav ul {
 	font-size: 18px; /* Adjust font size */
 	color: white; /* Adjust text color */
 }
-  
+
 /* Optional: Add hover effect on links */
 .nav-links a:hover {
 	color: #306E8A; /* Change color on hover */
@@ -284,18 +282,20 @@ main{
 
 /* Footer Section */
 footer {
-	width: 100%;
 	padding: 10px 20px;
+	box-sizing: border-box;
+	width: 100%;
 	background-color: #141D2B;
 	color: white;
 }
 
 footer div {
-	display: flex;
+	margin: 0 0 10px 0;
 	width: 100%;
+	display: flex;
+	
 	align-items: center;
 	justify-content: center;
-	margin: 0 0 10px 0;
 }
 
 /* setting logo size */
