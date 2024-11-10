@@ -238,6 +238,26 @@ main{
 /* !!Main Section!! */
 
 /* Cart Section */
+#cart-navTo {
+	position: fixed;
+	/* .8em + 2.8em + what ever value,
+	still messing around with the last value*/
+	top:calc(3.6em + 3em);
+	right: 0;
+	/* background-color: beige; */
+}
+
+#cart-navTo-btn {
+	padding: 1em;
+	border: none;
+	border-radius: 0.8em 0 0 0.8em;
+
+	background: linear-gradient(to bottom right, var(--col-dark, #2A6A86), var(--col-gradient2, #112C41));
+	font-size: 18px; /* matched nav-links a */
+	text-decoration: none;
+	color: white;
+}
+
 .cart-container {
 	/* padding to match look with product window above */
 	padding: 2em;
