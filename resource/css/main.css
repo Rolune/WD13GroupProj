@@ -14,6 +14,7 @@
 	--col-headings: #D9C27E;
 	--col-gradient1: #2A6A86;
 	--col-gradient2: #112C41;
+	--col-dark: #141D2B;
 	--col-bg: #0E1B24;
 	/* warnging colour
 		add as fall back variable
@@ -25,20 +26,20 @@
 }
 
 body {
-	background-image: linear-gradient(#2A6A86, #112C41);
+	background-image: linear-gradient(var(--col-gradient1, #2A6A86), var(--col-gradient2, #112C41));
 }
 
 /* Utility Class */
 
 .button-style {
 	/* couldn't find better way to prevent button from moving when adding border later */
-	border: 3px solid var(--col-gradient2, magenta);
+	border: 3px solid var(--col-gradient2, #112C41);
 	border-radius: 3px;
 	padding: 0.2em; /* used sort of like minimum gap between content & border */
 
 	box-sizing: border-box;
 	color:white;
-	background-color: var(--col-gradient2, magenta);
+	background-color: var(--col-gradient2, #112C41);
 }
 
 .button-style:hover {
@@ -47,8 +48,8 @@ body {
 
 .button-style:active {
 	border: 0;
-	border: 3px solid var(--col-bg, magenta);
-	background-color: var(--col-bg, magenta);
+	border: 3px solid var(--col-bg, #0E1B24);
+	background-color: var(--col-bg, #0E1B24);
 }
 
 /* leaving .logo blank,
@@ -80,7 +81,7 @@ header {
 	padding: 0.4em 20px;
 	box-sizing: border-box;
 	width: 100vw; /* switched 100% -> 100vw, 100% seems to give weird value on tablet size? */
-	background-image: linear-gradient(to bottom left, #2A6A86, #112C41); /* Optional background */
+	background-image: linear-gradient(to bottom left, var(--col-gradient1, #2A6A86), var(--col-gradient2, #112C41)); /* Optional background */
 	/* So the logo can be positioned */
 	position: fixed;
 	top: 0;
@@ -127,9 +128,10 @@ nav ul {
 
 /* Optional: Add hover effect on links */
 .nav-links a:hover {
-	color: #306E8A; /* Change color on hover */
+	color: var(--col-gradient1, #2A6A86); /* Change color on hover */
 	font-size: 1.2em;
-	text-shadow: 0.5px 0.5px  rgba(31, 30, 30, 0.5);
+	/* variable to use not clear for below */
+	text-shadow: 0.5px 0.5px  rgba(31, 30, 30, 0.5); 
 }
 /* !!Header Section!! */
 
@@ -149,8 +151,7 @@ main{
 }
 
 #products > * {
-	background-image: linear-gradient(to bottom right,#2A6A86, #112C41);
-	/* background: hsl(from var(--col-00, magenta) h calc(s - 10) calc(l + 25)); COREY REMOVED */
+	background-image: linear-gradient(to bottom right, var(--col-gradient1, #2A6A86), var(--col-gradient2, #112C41));
 }
 
 .product {
@@ -174,7 +175,7 @@ main{
 .product h1 {
 	margin: auto;
 
-	color: #D9C27E;
+	color: var(--col-headings, #D9C27E);
 	font-family: 'Mermaid','Book Antiqua';
 
 	/* grid setting */
@@ -200,7 +201,7 @@ main{
 	/* center upper */
 	margin: 0 auto; /* COREY altered to center with cart button */
 	
-	color: #D9C27E;
+	color: var(--col-headings,#D9C27E);
 	align-self: center; /* COREY altered to center with cart button, also altered font below slightly*/
 	font-style: italic;
 	font-size: 1.15em;
@@ -243,7 +244,7 @@ main{
 }
 /* Corey Recent Changes */
 .cart-items {
-	background-color: #112C41;
+	background-color: var(--col-gradient2, #112C41);
 	display: grid;
 	/* temporary position settings */
 	margin: 0 auto;
@@ -251,12 +252,13 @@ main{
 	max-width: 600px;
 	padding: 10px 30px;
 	border-radius: 2%;
-	color:#D9C27E;
+	color: var(--col-headings, #D9C27E);
 }
 
 .cart-item {
 	/* temp outline to show section */
-	background-color: #141D2B;
+	/* variable to use not clear for below */
+	background-color: var(--col-dark, #141D2B);
 	border-radius: 2%;
 	padding: 15px 20px;
 	margin: 5px 0;
@@ -286,7 +288,8 @@ footer {
 	padding: 10px 20px;
 	box-sizing: border-box;
 	width: 100%;
-	background-color: #141D2B;
+	/* variable to use not clear for below */
+	background-color: var(--col-dark, #141D2B);
 	color: white;
 }
 
@@ -306,11 +309,3 @@ footer .logo {
 	height: 6.2em;
 }
 /* !!Footer Section!! */
-
-/* Media tags
-	Maybe they should be seperate document to make it easier to see?
-*/
-
-/* Tablet Size */
-/* !!Tablet Size!! */
-/* !!Mobile Size!! */
